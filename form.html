@@ -1,0 +1,722 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="form-style.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
+        <link rel="icon" type="image/png" href="header.PNG" />
+
+    <title>Admission Form</title>
+    <style>
+        .row {
+            padding-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Main Navigation -->
+	<header w3-include-html="form.html">
+
+	</header>
+    <div class="container">
+        <form action="" method="post" id="form">
+            <div class="row">
+                <!-- <img src="./img/gfldlogo_new.png" style="width: auto;" class="col-md-3">
+                <h1 class="col-md-6" style="text-align: center;font: cloister black std regular;">GREEN FIELD CONVENT</h1>
+                <img src="./img/logo2.PNG" class="col-md-3"> -->
+                <img src="header.PNG" class="img-fluid img-responsive" alt="">
+            </div>
+    </div>
+    <div class="container" style="padding-top: 20px;">
+        <h3 style="color: green;">ADMISSION FORM</h3>
+        <p>Use only block letters . Please provide all details without leaving any blank</p>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9 col-lg-9" style="border: 1px solid #000;padding: 0;">
+                <h3 style="color: white;background-color: green">
+                    DOCUMENTS REQUIRED
+                </h3>
+                <p>
+                    Please attach photocopy of the following documents with photograph. Documents need to be self
+                    attested.
+                </p>
+                <ul>
+                    <li>
+                        Birth Certificate
+                    </li>
+                    <li>
+                        Previous Class Report Card (For Admission to Class UKG to Class VI)
+                    </li>
+                    <li>
+                        Immunization Card
+                    </li>
+                    <li>
+                        Four Photographs (Passport size) of student
+                    </li>
+                    <li>
+                        Aadhar Card
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-3 col-lg-3" style="padding-top: 10px;">
+                <div style="border: 1px solid #000;
+                    height: 88%;
+                    text-align: center;
+                    margin-top: auto;
+                    margin-bottom: auto;
+                    " id="studentPhotoDiv" class="upload-image-preview">
+                    <p style="padding: auto;">
+                        Student's photo
+                    </p> 
+                    <input id="fileStudentPhoto" type="file" class="form-control" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container" style="padding-top: 10px;padding:0;margin-top: 10px;">
+        <div class="col-md-12 col-lg-12" style="border:1px solid black;">
+            <h3 style="color: white;background: green;">
+                PERSONAL DETAILS
+            </h3>
+            <div class="row container">
+                <div class="col-md-6 col-lg-6">
+                    <div class="row">
+                        <p class="col-md-6 col-sm-6">
+                            NAME
+                        </p>
+                        <div class="col-md-6 col-lg-6">
+                            <input type="text" class="form-control " placeholder="NAME" name="" id="txtStudentName">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6">
+                    <div class="row">
+                        <p class="col-md-6 col-sm-6">
+                            Date Of Birth
+                        </p>
+                        <div class="col-md-6 col-lg-6">
+                            <input type="date" class="form-control " placeholder="Date Of Birth" name="" id="dateDOB">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row container">
+                <div class="col-md-4 col-lg-4">
+                    <div class="row">
+                        <p class="col-md-6 col-sm-6">
+                            SEX
+                        </p>
+                        <div class="col-md-6 col-lg-6">
+                            <select class="form-control" id="ddlStudentSex">
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                            </select>
+                            <!-- <input type="checkbox" name="" id="chkbxMale">
+                            <label for="chkbxMale">
+                                M
+                            </label>
+                            <input type="checkbox" name="" id="chkbxFemale">
+                            <label for="chkbxFemale">
+                                F
+                            </label> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4">
+                    <div class="row">
+                        <p class="col-md-6 col-sm-6">Bloodgroup</p>
+                        <div class="col-md-6 col-lg-6">
+                            <input type="text" class="form-control " placeholder="Bloodgroup" name="" id="txtBloodgroup">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4">
+                    <div class="row">
+                        <p class="col-md-6 col-sm-6">Nationality</p>
+                        <div class="col-md-6 col-lg-6">
+                            <input type="text" class="form-control " placeholder="Nationality" name=""
+                                id="txtNationality">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row container">
+                <div class="col-md-5">
+                    <div class="row">
+                        <p class="col-md-6 col-sm-6">
+                            Religion
+                        </p>
+                        <div class="col-md-6 col-lg-6">
+                            <input type="text" class="form-control " placeholder="Religion" name="" id="txtReligion">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <div class="row">
+                        <p class="col-md-3 col-lg-3">
+                            Category
+                        </p>
+                        <div class="col-md-9 col-lg-9">
+                            <select class="form-control" id="ddlCategory">
+                                <option value="General">General</option>
+                                <option value="SC">SC</option>
+                                <option value="ST">ST</option>
+                                <option value="OBC">OBC</option>
+                                <option value="Others">Others</option>
+                            </select>
+                            <!-- <input type="checkbox" name="" id="chkbxGeneral">
+                            <label for="chkbxGeneral">
+                                
+                            </label>
+                            <input type="checkbox" name="" id="chkbxSC">
+                            <label for="chkbxSC">
+                                
+                            </label>
+                            <input type="checkbox" name="" id="chkbxST">
+                            <label for="chkbxST">
+                                ST
+                            </label>
+                            <input type="checkbox" name="" id="chkbxOBC">
+                            <label for="chkbxOBC">
+                                OBC
+                            </label>
+                            <input type="checkbox" name="" id="chkbxOthers">
+                            <label for="chkbxOthers">
+                                Others
+                            </label> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row container">
+                <div class="col-md-5">
+                    <div class="row">
+                        <p class="col-md-6 col-sm-6">
+                            Mother Tongue
+                        </p>
+                        <div class="col-md-6 col-lg-6">
+                            <input type="text" class="form-control " placeholder="Mother Tongue" name=""
+                                id="txtMotherTongue">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <div class="row">
+                        <p class="col-md-5 col-lg-5">
+                            Single Parent
+                        </p>
+                        <div class="col-md-7 col-lg-7">
+                            <select class="form-control" id="ddlSingleParent">
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
+                            <!-- <input type="checkbox" name="" id="chkbxSingleParentYes">
+                            <label for="chkbxSingleParentYes">
+                                
+                            </label>
+                            <input type="checkbox" name="" id="chkbxSingleParentNo">
+                            <label for="chkbxSingleParentNo">
+                                No
+                            </label> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row container">
+                <div class="col-md-12 col-lg-12">
+                    <div class="row">
+                        <p class="col-md-4 col-lg-4">Legal Guardian (If single Parent)</p>
+                        <div class="col-md-4 col-lg-4">
+                            <select class="form-control" id="ddlLegalGuardian">
+                                <option value="Father">Father</option>
+                                <option value="Mother">Mother</option>
+                            </select>
+                        </div>
+                        <p class="col-md-4 col-lg-4s">
+                            *Legal Documents Required
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row container">
+                <div class="col-md-6 col-lg-6">
+                    <div class="row">
+                        <p class="col-md-6 col-lg-6">Contact No.</p>
+                        <div class="col-md-6 col-lg-6">
+                            <input type="text" class="form-control " placeholder="Contact No" name="" id="txtContactNo">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6">
+                    <div class="row">
+                        <p class="col-md-6 col-lg-6">Mobile</p>
+                        <div class="col-md-6 col-lg-6">
+                            <input type="text" class="form-control " placeholder="Mobile" name="" id="txtMobile">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row container">
+                <div class="col-md-6 col-lg-6">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th scope="col">Present Address</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>
+                                    <textarea name="" id="txtareaPrsntAddress"
+                                        style="width: -webkit-fill-available;"></textarea>
+                                </th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-md-6 col-lg-6">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th scope="col">Permanent Address</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>
+                                    <textarea name="" id="txtareaPrmntAddress"
+                                        style="width: -webkit-fill-available;"></textarea>
+                                </th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row" style="margin-top: 10px;">
+            <div class="col-md-5 col-lg-5" style="margin: auto;margin-top: inherit;">
+                <div class="col-md-12 col-lg-12"
+                    style="border:1px solid black;padding: 0;margin: auto;margin-top: inherit;">
+                    <h3 style="color: white;background: green;">
+                        EDUCATIONAL DETAILS
+                    </h3>
+                    <div class="row">
+                        <p class="col-md-5 col-lg-5">Admission Sought in Class.</p>
+                        <div class="col-md-6 col-lg-6">
+                            <input type="text" class="form-control " placeholder="Class Sought" name=""
+                                id="txtClassSought">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <p class="col-md-5 col-lg-5">Second language.</p>
+                        <div class="col-md-6 col-lg-6">
+                            <select class="form-control" id="ddlSecondLanguage">
+                                <option value="Hindi">Hindi</option>
+                                <option value="Bengali">Bengali</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 col-lg-12" style="margin-top: 10px;">
+                    <h5><b>INCASE OF EMERGENCY</b></h5>
+                    <div class="row">
+                        <p class="col-md-6 col-lg-6">Contact Person Name</p>
+                        <div class="col-md-6 col-lg-6">
+                            <input type="text" class="form-control " placeholder="Person Name" name=""
+                                id="txtEmergencyContactName">
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <p class="col-md-6 col-lg-6">Relation with the student</p>
+                        <div class="col-md-6 col-lg-6">
+                            <input type="text" class="form-control " placeholder="Relation" name=""
+                                id="txtEmergencyContactRelation">
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <p class="col-md-6 col-lg-6">Mobile</p>
+                        <div class="col-md-6 col-lg-6">
+                            <input type="text" class="form-control " placeholder="Mobile" name=""
+                                id="txtEmergencyContactMobile">
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <p class="col-md-6 col-lg-6">Transport</p>
+                        <div class="col-md-6 col-lg-6">
+                            <select class="form-control" id="ddlEmergencyTransport">
+                                <option value="Yes">Y</option>
+                                <option value="No">N</option>
+                            </select>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-6" style="border:1px solid black;padding: 0;">
+                <h3 style="color: white;background: green;">
+                    EDUCATIONAL DETAILS
+                </h3>
+                <div class="row">
+                    <p class="col-md-5 col-lg-5">Name of School</p>
+                    <div class="col-md-6 col-lg-6">
+                        <input type="text" class="form-control " placeholder="School Name" name=""
+                            id="txtPrevSchoolName">
+                    </div>
+                </div>
+                <div class="row">
+                    <p class="col-md-5 col-lg-5">Place.</p>
+                    <div class="col-md-6 col-lg-6">
+                        <input type="text" class="form-control " placeholder="Place" name="" id="txtPrevSchoolPlace">
+                    </div>
+                </div>
+                <div class="row">
+                    <p class="col-md-5 col-lg-5">Board</p>
+                    <div class="col-md-6 col-lg-6">
+                        <input type="text" class="form-control " placeholder="School Board" name=""
+                            id="txtPrevSchoolBoard">
+                    </div>
+                </div>
+                <div class="row">
+                    <p class="col-md-5 col-lg-5">Principal"s Name.</p>
+                    <div class="col-md-6 col-lg-6">
+                        <input type="text" class="form-control " placeholder="Principal"s Name" name=""
+                            id="txtPrevSchoolPrincipalName">
+                    </div>
+                </div>
+                <div class="row">
+                    <p class="col-md-5 col-lg-5">Last Class Attended.</p>
+                    <div class="col-md-6 col-lg-6">
+                        <input type="text" class="form-control " placeholder="Class Sought" name=""
+                            id="txtPrevLastClassAttended">
+                    </div>
+                </div>
+                <div class="row">
+                    <p class="col-md-5 col-lg-5">Passed with %</p>
+                    <div class="col-md-6 col-lg-6">
+                        <input type="text" class="form-control " placeholder="Percentage" name=""
+                            id="txtPrevPassedPercentage">
+                    </div>
+                </div>
+                <div class="row">
+                    <p class="col-md-5 col-lg-5">Session</p>
+                    <div class="col-md-6 col-lg-6">
+                        <input type="text" class="form-control " placeholder="Session" name="" id="txtPrevSession">
+                    </div>
+                </div>
+                <div class="row">
+                    <p class="col-md-5 col-lg-5">Medium of Instruction.</p>
+                    <div class="col-md-6 col-lg-6">
+                        <input type="text" class="form-control " placeholder="Medium Of Instruction" name=""
+                            id="txtPrevMediumOfInstruction">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="container" style="margin-top: 20px;">
+        <div class="row">
+            <div class="col-md-9 col-lg-9" style="border: 1px solid #000;padding: 0;">
+                <h3 style="color: white;background-color: green">
+                    FATHER'S DETAILS
+                </h3>
+                <div class="row">
+                    <p class="col-md-5 col-lg-5">Name</p>
+                    <div class="col-md-6 col-lg-6">
+                        <input type="text" class="form-control " placeholder="Father"s Name" name="" id="txtFatherName">
+                    </div>
+                </div>
+                <div class="row">
+                    <p class="col-md-5 col-lg-5">Highest Qualification</p>
+                    <div class="col-md-6 col-lg-6">
+                        <input type="text" class="form-control " placeholder="Highest Qualification" name=""
+                            id="txtfatherHighestQual">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <p class="col-md-5 col-lg-5">Mobile</p>
+                    <div class="col-md-6 col-lg-6">
+                        <input type="text" class="form-control " placeholder="Mobile" name="" id="txtfatherMobile">
+                    </div>
+                </div>
+                <div class="row">
+                    <p class="col-md-5 col-lg-5">Emergency Contact No</p>
+                    <div class="col-md-6 col-lg-6">
+                        <input type="text" class="form-control " placeholder="Emergency Contact" name=""
+                            id="txtfatherEmerContactNo">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-lg-3" style="padding-top: 10px;">
+                <div style="border: 1px solid #000;
+                    height: 88%;
+                    text-align: center;
+                    margin-top: auto;
+                    margin-bottom: auto;
+                    " id="fatherPhotoDiv">
+                    <p style="padding: auto;">
+                        Father"s photo
+                    </p>
+                    <input id="fileFatherPhoto" class="form-control" type="file" />
+                    <label for="fileFatherSign" style="padding-top: 10px;">SIGN</label>
+                    <input id="fileFatherSign" type="file" class="col-md-9 col-lg-9 form-control" />
+
+                </div>
+                <!-- <div class="col-md-12 col-sm-12 container">
+                    <div class="row">
+                    <p class="col-md-3 col-lg-3"> SIGN</p>
+
+                    </div>
+
+                </div> -->
+            </div>
+        </div>
+    </div>
+    <div class="container" style="margin-top: 20px;">
+        <div class="col-md-9 col-lg-9">
+            <h3 class="col-md-4" style="text-align: center;background: green;color: white;margin: auto;">
+                WORK DETAILS
+            </h3>
+            <div class="row">
+                <p class="col-md-6 col-lg-6">
+                    Occupation
+                </p>
+                <div class="col-md-6 col-lg-6">
+                    <select class="form-control" id="ddlfatherOccupation">
+                        <option value="Service">Service</option>
+                        <option value="Business">Business</option>
+                        <option value="Professional">Professional</option>
+                        <option value="Others">Others</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <p class="col-md-6 col-lg-6">
+                    Organisation Name
+                </p>
+                <div class="col-md-6 col-lg-6">
+                    <input type="text" class="form-control " placeholder=" Organisation Name" name=""
+                        id="txtfatherOrgName">
+                </div>
+            </div>
+            <div class="row">
+                <p class="col-md-6 col-lg-6">
+                    Designation
+                </p>
+                <div class="col-md-6 col-lg-6">
+                    <input type="text" class="form-control " placeholder="Designation" name=""
+                        id="txtfatherDesignation">
+                </div>
+            </div>
+            <div class="row">
+                <p class="col-md-6 col-lg-6">
+                    Annual Income
+                </p>
+                <div class="col-md-6 col-lg-6">
+                    <select class="form-control" id="ddlfatherAnnualIncome">
+                        <option value="Upto 2 Lakh">Upto 2 Lakh</option>
+                        <option value="Upto 5 Lakh">Upto 5 Lakh</option>
+                        <option value="More than 5 Lakh">More than 5 Lakh</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <p class="col-md-6 col-lg-6">
+                    Office Address
+                </p>
+                <div class="col-md-6 col-lg-6">
+                    <input type="text" class="form-control " placeholder="Office Address" name=""
+                        id="txtfatherOfficeAddress">
+                </div>
+            </div>
+            <div class="row">
+                <p class="col-md-6 col-lg-6">
+                    Office Contact No
+                </p>
+                <div class="col-md-6 col-lg-6">
+                    <input type="text" class="form-control " placeholder="Office Contact No" name=""
+                        id="txtfatherOfficeContactNo">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Mother Details -->
+    <div class="container" style="margin-top: 20px;">
+        <div class="row">
+            <div class="col-md-9 col-lg-9" style="border: 1px solid #000;padding: 0;">
+                <h3 style="color: white;background-color: green">
+                    MOTHER'S DETAILS
+                </h3>
+                <div class="row">
+                    <p class="col-md-5 col-lg-5">Name</p>
+                    <div class="col-md-6 col-lg-6">
+                        <input type="text" class="form-control " placeholder="Mother"s Name" name="" id="txtMotherName">
+                    </div>
+                </div>
+                <div class="row">
+                    <p class="col-md-5 col-lg-5">Highest Qualification</p>
+                    <div class="col-md-6 col-lg-6">
+                        <input type="text" class="form-control " placeholder="Highest Qualification" name=""
+                            id="txtmotherHighestQual">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <p class="col-md-5 col-lg-5">Mobile</p>
+                    <div class="col-md-6 col-lg-6">
+                        <input type="text" class="form-control " placeholder="Mobile" name="" id="txtmotherMobile">
+                    </div>
+                </div>
+                <div class="row">
+                    <p class="col-md-5 col-lg-5">Emergency Contact No</p>
+                    <div class="col-md-6 col-lg-6">
+                        <input type="text" class="form-control " placeholder="Emergency Contact" name=""
+                            id="txtmotherEmerContactNo">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-lg-3" style="padding-top: 10px;">
+                <div style="border: 1px solid #000;
+                    height: 88%;
+                    text-align: center;
+                    margin-top: auto;
+                    margin-bottom: auto;
+                    " id="motherPhotoDiv">
+                    <p style="padding: auto;">
+                        Mother"s photo
+                    </p>
+                    <input id="fileMotherPhoto" type="file"  class="form-control"/>
+                    <label for="fileMotherSign" style="padding-top: 10px;">SIGN</label>
+                    <input id="fileMotherSign" type="file" class="col-md-9 col-lg-9 form-control" />
+
+                </div>
+                <!-- <div class="col-md-12 col-sm-12 container">
+                    <div class="row">
+                        <p class="col-md-3 col-lg-3"> SIGN</p>
+                    </div>
+
+                </div> -->
+            </div>
+        </div>
+    </div>
+    <div class="container" style="margin-top: 20px;">
+        <div class="col-md-9 col-lg-9">
+            <h3 class="col-md-4" style="text-align: center;background: green;color: white;margin: auto;">
+                WORK DETAILS
+            </h3>
+            <div class="row">
+                <p class="col-md-6 col-lg-6">
+                    Occupation
+                </p>
+                <div class="col-md-6 col-lg-6">
+                    <select class="form-control" id="ddlmotherOccupation">
+                        <option value="Service">Service</option>
+                        <option value="Business">Business</option>
+                        <option value="Professional">Professional</option>
+                        <option value="Others">Others</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <p class="col-md-6 col-lg-6">
+                    Organisation Name
+                </p>
+                <div class="col-md-6 col-lg-6">
+                    <input type="text" class="form-control " placeholder=" Organisation Name" name=""
+                        id="txtmotherOrgName">
+                </div>
+            </div>
+            <div class="row">
+                <p class="col-md-6 col-lg-6">
+                    Designation
+                </p>
+                <div class="col-md-6 col-lg-6">
+                    <input type="text" class="form-control " placeholder="Designation" name=""
+                        id="txmotherDesignation">
+                </div>
+            </div>
+            <div class="row">
+                <p class="col-md-6 col-lg-6">
+                    Annual Income
+                </p>
+                <div class="col-md-6 col-lg-6">
+                    <select class="form-control" id="ddlmotherAnnualIncome">
+                        <option value="Upto 2 Lakh">Upto 2 Lakh</option>
+                        <option value="Upto 5 Lakh">Upto 5 Lakh</option>
+                        <option value="More than 5 Lakh">More than 5 Lakh</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <p class="col-md-6 col-lg-6">
+                    Office Address
+                </p>
+                <div class="col-md-6 col-lg-6">
+                    <input type="text" class="form-control " placeholder="Office Address" name=""
+                        id="txtmotherOfficeAddress">
+                </div>
+            </div>
+            <div class="row">
+                <p class="col-md-6 col-lg-6">
+                    Office Contact No
+                </p>
+                <div class="col-md-6 col-lg-6">
+                    <input type="text" class="form-control " placeholder="Office Contact No" name=""
+                        id="txtmotherOfficeContactNo">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container" style="margin-top: 20px;">
+        <div class="row">
+            <p class="col-md-12 col-lg-12">
+            <h5 style="background: darkblue;color: white;text-align: center;" id="declare">DECLARATION</h5>
+            I/We <input type="text" class="form-control" id="txtdeclarationFather">(Father"s Name) & <input type="text"
+                class="form-control" id="txtdeclarationMother"> (Mother"s Name) parents of <input type="text"
+                class="form-control" id="txtdeclarationStudent">(Student"s Name) have read the school"s rules and
+            regulations
+            mentioned in the guide book and hereby agree to abide by the same. All the above mentioned details
+            provided by me/us are true in all respects. In case of any discrepansy, the School Authority
+            reserves the right to cancel the Admission Form as well as the admission of the child. I/We also
+            hereby agree to abide by the school rules that the School reserves the right to issue a compulsory
+            Transfer Certificate to the Child for any act of indiscipline. I have read and fully understood
+            these conditions and declarations.</p>
+        </div>
+    </div>
+    </form>
+    <div class="container" style="text-align: center;">
+        <button type="button" class="btn btn-primary" id="btnSubmit">SUBMIT</button>
+    </div>
+    </div>
+    <!--Footer-->
+	<footer class="page-footer text-center text-md-left font-small elegant-color-dark" w3-include-html="./src/includes/footer.html">
+		
+	</footer>
+	<!-- /.Footer -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.19.0/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="https://www.w3schools.com/lib/w3.js"></script>
+	<script type="text/javascript" src="master.js"></script>
+    <script src="form-script.js"></script>
+
+</body>
+
+</html>
